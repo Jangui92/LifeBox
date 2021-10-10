@@ -14,7 +14,7 @@ Finding Your l'Y'fe
 2. Users are able to post journalies, update their mood and thought status, delete journalies, receive likes and comments from users and non-users on their journalies.
 3. Navigation gives users access to additional quotes and tips of the day.
 4. Design mock up is on [Figma](https://www.figma.com/file/1yrt8dZSW4wnb2SSa1KgEh/Untitled?node-id=0%3A1).
-If you would like to dive deeper into LifeBox's commencement, I have provided a link to my trello. Take a look! [here](https://trello.com/b/2LHsSQdZ/lifebox).
+5. If you would like to dive deeper into LifeBox's commencement, I have provided a link to my trello. Take a look! [here](https://trello.com/b/2LHsSQdZ/lifebox).
 
 > ## _Technologies used_
 
