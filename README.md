@@ -1,6 +1,6 @@
 ># **_LyfeBox_**
-**Mental Wellness Journal**
-**Finding Your l'Y'fe**
+**Mental Wellness Journal**:
+Finding Your l'Y'fe
 
 #### By: Janay Anguiano
 
