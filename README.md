@@ -1,7 +1,7 @@
 ># **_LifeBox_**
 **Mental Wellness Journal**
 
-#### _By: Janay Anguiano
+#### By: Janay Anguiano
 
 #### 10/11/2021
 
@@ -41,8 +41,7 @@ Users will be able to register, login and navigate from their user profile. User
 ![Screenshots]()
 
 > ## _Credits_
-
-- []()
+TBA
 
 > ## _Future Updates_
 
