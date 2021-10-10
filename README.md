@@ -13,6 +13,7 @@ Finding Your l'Y'fe
 1. Users can create a **Free** LifeBox page on the site.
 2. Users are able to post journalies, update their mood and thought status, delete journalies, receive likes and comments from users and non-users on their journalies.
 3. Navigation gives users access to additional quotes and tips of the day.
+4. Design mock up is on [Figma](https://www.figma.com/file/1yrt8dZSW4wnb2SSa1KgEh/Untitled?node-id=0%3A1).
 If you would like to dive deeper into LifeBox's commencement, I have provided a link to my trello. Take a look! [here](https://trello.com/b/2LHsSQdZ/lifebox).
 
 > ## _Technologies used_
@@ -41,7 +42,7 @@ Users will be able to register, login and navigate from their user profile. User
 ![Screenshots]()
 
 > ## _Credits_
-TBA
+-[Figma](https://www.figma.com/file/1yrt8dZSW4wnb2SSa1KgEh/Untitled?node-id=0%3A1)
 
 > ## _Future Updates_
 
