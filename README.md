@@ -1,3 +1,4 @@
+![Screenshot](lyfebox.png)
 ># **_LyfeBox_**
 **Mental Wellness Journal**:
 Finding Your l'Y'fe
