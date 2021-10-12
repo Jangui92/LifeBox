@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Tips.init(
     {
-      tipsId:  {
+      userId:  {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
         references: {

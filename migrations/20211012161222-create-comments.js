@@ -17,10 +17,7 @@ module.exports = {
           key: 'id'
         }
       },
-      journalies: {
-        type: Sequelize.STRING
-      },
-      date: {
+      content: {
         type: Sequelize.STRING
       },
       createdAt: {
