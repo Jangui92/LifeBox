@@ -1,8 +1,8 @@
 const router = require('express').Router()
-const controller = require('../controllers/PhotoController')
+const controller = require('./../controllers/CommentsControllers')
 
-router.get('/:user_id', controller.GetPhotos)
-router.post('/:user_id', controller.CreatePhoto)
-router.delete('/:photo_id', controller.DeletePhoto)
+router.get('/:comments_id', controller.CreateComment)
+router.post('/:comments_id', controller.GetAllComments)
+router.delete('/:comments_id', controller.DeleteComment)
 
 module.exports = router

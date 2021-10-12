@@ -1,11 +1,9 @@
-const { Tips } = require('../models')
+const { Tips } = require('../models/tips')
 
-const GetTips = async (req, res) => {
+const GetAllTips = async (req, res) => {
   try {
-    const user = await Tips.findByPk(req.params.id, {
-      include: [{ username: username }, { content: content }, { date: date }]
-    })
-    res.send(user)
+    const tips = await Tips.findAll(req.params.tips_id)
+    res.send(tips)
   } catch (error) {
     throw error
   }
@@ -13,7 +11,7 @@ const GetTips = async (req, res) => {
 
 const DeleteTip = async (req, res) => {
   try {
-    await Tip.destroy({ where: { user_id: req.params.user_id } })
+    const tips = await Tips.destroy({ where: { tips_id: req.params.id } })
     res.send({
       msg: 'Tip Deleted',
       payload: req.params.user_id,
@@ -24,6 +22,6 @@ const DeleteTip = async (req, res) => {
   }
 }
 module.exports = {
-  GetTips,
+  GetAllTips,
   DeleteTip
 }

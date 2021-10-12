@@ -1,15 +1,9 @@
-const { User } = require('../models')
+const { User } = require('../models/user.js')
 
 const GetUser = async (req, res) => {
+  console.log('GetUser')
   try {
-    const user = await User.findByPk(req.params.id, {
-      include: [
-        { name: name },
-        { username: username },
-        { mood_status: mood_status },
-        { journalies: journalies }
-      ]
-    })
+    const user = await User.findAll()
     res.send(user)
   } catch (error) {
     throw error
@@ -17,11 +11,13 @@ const GetUser = async (req, res) => {
 }
 
 const CreateUser = async (req, res) => {
+  console.log(req.body)
   try {
     const user = await User.create({
-      name,
-      username,
-      email
+      id: req.body.id,
+      name: req.body.name,
+      username: req.body.username,
+      email: req.body.email
     })
     res.send(user)
   } catch (error) {
@@ -31,11 +27,11 @@ const CreateUser = async (req, res) => {
 
 const UpdateUserMood = async (req, res) => {
   try {
-    const user = await User.update(
+    const mood = await User.update(
       { ...req.body },
       { where: { mood_status: req.params }, returning: true }
     )
-    res.send(user)
+    res.send(mood)
   } catch (error) {
     throw error
   }
