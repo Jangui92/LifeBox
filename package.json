@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.1",
+    "react-bootstrap": "^2.0.0-rc.0",
+    "sequelize": "^6.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "lyfebox",
+  "description": "![Screenshot](Screenshots/lyfebox.png) ># **_LyfeBox_** **Mental Wellness Journal**: Finding Your l'Y'fe",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jangui92/LyfeBox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jangui92/LyfeBox/issues"
+  },
+  "homepage": "https://github.com/Jangui92/LyfeBox#readme",
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "nodemon": "^2.0.13"
+  }
+}
