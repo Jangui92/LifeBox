@@ -8,24 +8,29 @@ const GetAllComments = async (req, res) => {
         throw error
       }
     }
+    const { Comments } = require('../models')
 
-    const GetAllComments = await Comments.findByPk(req.params.id, {
-      include: [{ name: name }, { content: content }, { date: date }]
+    const GetAllComments = await Comments.findByPk(req.params.comments_id, {
+      include: [{ username: username }, { content: content }, { date: date }]
     })
-    res.send(user)
+    res.send(comments)
   } catch (error) {
     throw error
   }
 }
 const DeleteComment = async (req, res) => {
   try {
-    await User.destroy({ where: { user_id: req.params.user_id } })
+    await Comment.destroy({ where: { user_id: req.params.comments_id } })
     res.send({
       msg: 'Profile Deleted',
-      payload: req.params.user_id,
+      payload: req.params.comments_id,
       status: 'Ok'
     })
   } catch (error) {
     throw error
   }
+}
+module.exports = {
+  GetAllComments,
+  DeleteComment
 }

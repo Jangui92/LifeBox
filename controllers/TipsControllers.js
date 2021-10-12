@@ -1,7 +1,9 @@
+const { Tips } = require('../models')
+
 const GetTips = async (req, res) => {
   try {
     const user = await Tips.findByPk(req.params.id, {
-      include: [{ name: name }, { content: content }]
+      include: [{ username: username }, { content: content }, { date: date }]
     })
     res.send(user)
   } catch (error) {
@@ -20,4 +22,8 @@ const DeleteTip = async (req, res) => {
   } catch (error) {
     throw error
   }
+}
+module.exports = {
+  GetTips,
+  DeleteTip
 }
