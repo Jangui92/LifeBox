@@ -1,9 +1,8 @@
-const { User } = require('../models/user.js')
+const { User } = require('../models')
 
 const GetUser = async (req, res) => {
-  console.log('GetUser')
   try {
-    const user = await User.findAll()
+    const user = await User.findOne()
     res.send(user)
   } catch (error) {
     throw error
@@ -14,10 +13,11 @@ const CreateUser = async (req, res) => {
   console.log(req.body)
   try {
     const user = await User.create({
-      id: req.body.id,
       name: req.body.name,
-      username: req.body.username,
-      email: req.body.email
+      userName: req.body.userName,
+      email: req.body.email,
+      moodStatus: req.body.moodStatus,
+      journalies: req.body.journalies
     })
     res.send(user)
   } catch (error) {
@@ -29,7 +29,7 @@ const UpdateUserMood = async (req, res) => {
   try {
     const mood = await User.update(
       { ...req.body },
-      { where: { mood_status: req.params }, returning: true }
+      { where: { moodStatus: req.body.moodStatus }, returning: true }
     )
     res.send(mood)
   } catch (error) {
