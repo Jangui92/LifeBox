@@ -7,6 +7,7 @@ function GratefulPage() {
 
   return (
     <div>
+      <h1>Grateful Page </h1>
       <GratefulForm />
     </div>
   )

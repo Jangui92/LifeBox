@@ -2,8 +2,8 @@ import React from 'react'
 
 function LyfeBox() {
   return (
-    <div className="lyfebox-title">
-      <h1> Lyfebox</h1>
+    <div>
+      <h1 className="lyfebox-title"> Lyfebox</h1>
     </div>
   )
 }

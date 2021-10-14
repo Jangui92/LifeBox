@@ -1,48 +1,28 @@
 import React from 'react'
-import { nav } from 'react-bootstrap'
+import { Container, NavDropdown, Nav, Navbar } from 'react-bootstrap'
 
 export default function Navigation() {
   return (
-    // <header>
-    //   <NavLink to="/lyfebox">Begin</NavLink>
-    //   <NavLink to="/profile">Profile</NavLink>
-    //   <NavLink to="/mission">Our Mission</NavLink>
-    //   <NavLink to="/GratefulPage">Grateful Page</NavLink>
-    //   <NavLink to="/CoinitPage">Coin it</NavLink>
-    // </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#lyfebox" className="nav-barlyfe">
           LyfeBox
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/mission">
-              Our Mission
-            </a>
-            <a class="nav-link" href="/profile">
-              Profile
-            </a>
-            <a class="nav-link" href="/gratefulpage">
-              Grateful
-            </a>
-            <a class="nav-link" href="/coinitpage">
-              Coin It
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">LyfeBox</Nav.Link>
+            <Nav.Link href="/Mission">Our Mission</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/Profile">Profile</NavDropdown.Item>
+              <NavDropdown.Item href="/GratefulPage">
+                Grateful Page
+              </NavDropdown.Item>
+              <NavDropdown.Item href="CoinitPage">Coin It</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
