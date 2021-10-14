@@ -3,7 +3,7 @@ import React from 'react'
 const GratefulForm = () => {
   return (
     <div className="grateful-form">
-      <form>
+      <form type="text" placeholder="What are you grateful for?">
         <p>
           {' '}
           Take this time to tell us what you are grateful for, there is nothing
