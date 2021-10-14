@@ -1,3 +1,23 @@
 .App {
-  text-align: center;
+text-align: center;
+
+position: absolute;
+width: 241px;
+height: 422px;
+
+background: linear-gradient(180deg, rgba(243, 149, 150, 0.6633) 0%, rgba(243, 149, 177, 0.0693) 100%);
+box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+border-radius: 34px;
+}
+
+.mission-bubble {
+position: absolute;
+width: 219px;
+height: 209px;
+
+background: rgba(173, 139, 88, 0.31);
+border: 2px solid #AD8B58;
+box-sizing: border-box;
+box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+border-radius: 104.5px;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
+import CoinitForm from '../components/CoinitForm'
 
-function CoinitPage() {
+const CoinitPage = () => {
   return <div></div>
 }
 

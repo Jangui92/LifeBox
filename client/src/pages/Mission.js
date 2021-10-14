@@ -2,7 +2,7 @@ import React from 'react'
 
 function Mission() {
   return (
-    <div>
+    <div className="mission-bubble">
       <h1> Our Mission</h1>
       <p>
         Cultivate healthy habits that will promote a healthy mindset and healthy
