@@ -16,7 +16,9 @@ border-radius: 34px; */
   display: flex;
   justify-content: center;
   
-
+}
+.journal-field {
+  background: rgba(173, 139, 88, 0.34);
 }
 .mission-bubble {
   left: 0;
