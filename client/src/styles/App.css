@@ -12,7 +12,12 @@ background: linear-gradient(180deg, rgba(243, 149, 150, 0.6633) 0%, rgba(243, 14
 box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
 border-radius: 34px; */
 
+.journal-container {
+  display: flex;
+  justify-content: center;
+  
 
+}
 .mission-bubble {
   left: 0;
   line-height: 200px;
