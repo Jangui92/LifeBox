@@ -1,6 +1,5 @@
 import Profile from './pages/Profile'
 import Mission from './pages/Mission'
-import GratefulPage from './pages/GratefulPage'
 import CoinitPage from './pages/CoinitPage'
 import NavBar from './components/NavBar'
 import LyfeBox from './pages/LyfeBox'
@@ -16,7 +15,6 @@ function App() {
         <Route exact path="/" component={LyfeBox} />
         <Route path="/Mission" component={Mission} />
         <Route path="/Profile" component={Profile} />
-        <Route path="/GratefulPage" component={GratefulPage} />
         <Route path="/CoinitPage" component={CoinitPage} />
       </Switch>
     </div>

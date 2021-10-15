@@ -50,6 +50,7 @@ Users will be able to register, login and navigate from their user profile. User
 > ## _Credits_
 -[Figma](https://www.figma.com/file/1yrt8dZSW4wnb2SSa1KgEh/Untitled?node-id=0%3A1)
 -[Bootstrap](https://react-bootstrap.netlify.app/components/navs/)
+-[Luke Peavey Quotes](https://github.com/lukePeavey/quotable)
 
 > ## _Future Updates_
 

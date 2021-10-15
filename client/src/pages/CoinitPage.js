@@ -1,11 +1,11 @@
 import React from 'react'
-import CoinitForm from '../components/CoinitForm'
+import Coinit from '../components/Coinit'
 
 const CoinitPage = () => {
   return (
     <div>
       <h1>Coin it </h1>
-      <CoinitForm />
+      <Coinit />
     </div>
   )
 }

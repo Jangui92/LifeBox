@@ -5,7 +5,6 @@ const GratefulForm = () => {
     <div className="grateful-form">
       <form type="text" placeholder="What are you grateful for?">
         <p>
-          {' '}
           Take this time to tell us what you are grateful for, there is nothing
           too small. In retrospect we begin to see how all the little things
           that we are grateful for add up into creating our 'why's' in life.
