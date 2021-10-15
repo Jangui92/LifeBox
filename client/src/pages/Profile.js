@@ -5,8 +5,9 @@ import CommentsForm from '../components/CommentsForm'
 import GratefulForm from '../components/GratefulForm'
 import axios from 'axios'
 
-const Profile = () => {
+const Profile = (props) => {
   const [quote, setQuote] = useState({})
+
   let counter = 0
   useEffect(() => {
     getQuotes()
