@@ -1,19 +1,8 @@
 const { Comments } = require('../models/comments')
 
-const CreateComment = async (req, res) => {
+const GetComments = async (req, res) => {
   try {
-    const comment = await Comments.create({ ...req.body })
-    res.send(comment)
-  } catch (error) {
-    throw error
-  }
-}
-
-const GetAllComments = async (req, res) => {
-  try {
-    const comments = await Comments.findByPk(req.params.comments_id, {
-      include: [{ username: username }, { content: content }, { date: date }]
-    })
+    const comments = await Comments.findAll()
     res.send(comments)
   } catch (error) {
     throw error
@@ -22,18 +11,29 @@ const GetAllComments = async (req, res) => {
 
 const DeleteComment = async (req, res) => {
   try {
-    await Comments.destroy({ where: { user_id: req.params.comments_id } })
+    let commentsId = parseInt(req.params.comments_id)
+    await Tips.destroy({ where: { id: commentsId } })
     res.send({
-      msg: 'Profile Deleted',
-      payload: req.params.comments_id,
-      status: 'Ok'
+      msg: `Tip ${commentsId} Deleted`
     })
   } catch (error) {
     throw error
   }
 }
+const CreateComment = async (req, res) => {
+  try {
+    const tips = await Comments.create({
+      content: req.body.content,
+      date: req.body.date
+    })
+    res.send(commentss)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
-  CreateComment,
   GetAllComments,
-  DeleteComment
+  DeleteComment,
+  CreateComment
 }

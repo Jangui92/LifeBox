@@ -25,18 +25,6 @@ const CreateUser = async (req, res) => {
   }
 }
 
-const UpdateUserMood = async (req, res) => {
-  try {
-    const mood = await User.update(
-      { ...req.body },
-      { where: { moodStatus: req.body.moodStatus }, returning: true }
-    )
-    res.send(mood)
-  } catch (error) {
-    throw error
-  }
-}
-
 const DeleteUser = async (req, res) => {
   try {
     await User.destroy({ where: { user_id: req.params.user_id } })
@@ -53,6 +41,5 @@ const DeleteUser = async (req, res) => {
 module.exports = {
   GetUser,
   CreateUser,
-  UpdateUserMood,
   DeleteUser
 }
