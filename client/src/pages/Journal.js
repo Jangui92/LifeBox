@@ -5,14 +5,13 @@ import CommentsForm from '../components/CommentsForm'
 import GratefulForm from '../components/GratefulForm'
 import axios from 'axios'
 
-const Journal = (props) => {
+function Journal(props) {
   const [quote, setQuote] = useState({})
-  const [tip, setTip] = useState([])
+  // const [tip, setTip] = useState([])
 
-  let counter = 0
   useEffect(() => {
     getQuotes()
-  }, [counter])
+  })
 
   const getQuotes = async () => {
     try {
@@ -20,7 +19,6 @@ const Journal = (props) => {
         `http://api.quotable.io/random?tags=inspirational`
       )
       setQuote(res.data)
-      counter += 1
     } catch (error) {
       throw error
     }
@@ -33,8 +31,8 @@ const Journal = (props) => {
       <h1>Quote of the Day</h1>
       <div className="daily-quote">
         <p>{quote.content}</p>
-        <p> {getQuotes}</p>
-        <p setTip={setTip}> {tip} </p>
+        <p> </p>
+        <p> </p>
       </div>
       <TipsForm />
       <JournaliesForm />

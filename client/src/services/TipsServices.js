@@ -1,29 +1,16 @@
 import Client from 'api'
 import 'seeders/tips.js'
 
-async function randomQuote() {
-  try{
-  const response = await Client.get('/') }
-  const data = await response.json()
-  console.log(`${data.content} —${data.author}`)
-  } catch (error) {
-  throw error
-}
-randomQuote()
-
-
 export const GetQuotes = async () => {
   try {
-    const res = await Axios.get(`/quotes`)
+    const res = await axios.get(`/quotes`)
     return res.data
   } catch (error) {
     throw error
   }
 }
 
-
-
-export const DeleteQuote = async (/quotes/:id) => {
+export const DeleteQuote = async (req, res) => {
   try {
     await Axios.delete(`/quotes/:id}`)
   } catch (error) {
