@@ -5,14 +5,14 @@ import CommentsForm from '../components/CommentsForm'
 import GratefulForm from '../components/GratefulForm'
 import axios from 'axios'
 
-const Profile = (props) => {
+const Journal = (props) => {
   const [quote, setQuote] = useState({})
   const [tip, setTip] = useState([])
 
-  let counter = 0
+  // let counter = 0
   useEffect(() => {
     getQuotes()
-  }, [counter])
+  }, '')
 
   const getQuotes = async () => {
     try {
@@ -20,7 +20,7 @@ const Profile = (props) => {
         `http://api.quotable.io/random?tags=inspirational`
       )
       setQuote(res.data)
-      counter += 1
+      // counter += 1
     } catch (error) {
       throw error
     }
@@ -44,4 +44,4 @@ const Profile = (props) => {
   )
 }
 
-export default Profile
+export default Journal
