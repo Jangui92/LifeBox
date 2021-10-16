@@ -7,16 +7,12 @@ import axios from 'axios'
 
 const Profile = (props) => {
   const [quote, setQuote] = useState({})
-  const [saveQuote, setSaveQuote] = useState({})
+  const [tip, setTip] = useState([])
 
   let counter = 0
   useEffect(() => {
     getQuotes()
   }, [counter])
-
-  useEffect(() => {
-    saveQuote()
-  })
 
   const getQuotes = async () => {
     try {
@@ -37,7 +33,8 @@ const Profile = (props) => {
       <h1>Quote of the Day</h1>
       <div className="daily-quote">
         <p>{quote.content}</p>
-        <button>Save</button>
+        <p> {getQuotes}</p>
+        <p setTip={setTip}> {tip} </p>
       </div>
       <TipsForm />
       <JournaliesForm />

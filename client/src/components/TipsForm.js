@@ -1,51 +1,54 @@
 import axios from 'axios'
-import e from 'express'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { BASE_URL } from '../globals'
 
 const TipsForm = (props) => {
-  const [tip, setTip] = React.useState(null)
+  const [tip, setTip] = useState(null)
 
-const getTip = () => {
-  axios.get(BASE_URL).then((response) => {
-    setTip(response.data)
-  })
-}
-if (!tip) return null
+  const getTip = async () => {
+    try {
+      const res = await axios.get()
+      setTip(res.data)
+    } catch (error) {
+      throw error
+    }
+  }
+  // const getTip = (res) => {
+  //   axios.get(BASE_URL).then((res) => {
+  //     setTip(res.data)
+  //   })
+  // }
+  // if (!tip) return null
 
+  // const updateTip = (req, res) => {
+  //   axios
+  //     .put(`${BASE_URL}/1`, {
+  //       content: req.body.content
+  //     })
+  //     .then((res) => {
+  //       setTip(res.data)
+  //     })
+  // }
+  // if (!tip) return 'No Post!'
 
-const updateTip = () => {
-  axios.put(`${BASE_URL}/1`, {
-    content: req.body.content
-  })
-    .then((response) => {
-      setTip(response.data)
-    })
-}
-if(!tip) return "No Post!"
-
-  const createTip = () => {
+  const createTip = (req, res) => {
     axios
       .post(BASE_URL, {
         content: req.body.content
       })
-      .then((response) => {
-        setTip(response.data)
+      .then((res) => {
+        setTip(res.data)
       })
   }
   if (!tip) return 'No tip!'
 
-  const deleteTip = () => {
-    axios.delete(`${BASE_URL}/1`).then(() => {
-      alert('Tip Deletedd')
-      setTip(null)
-    })
-  }
-  if (!tip) return 'No Tip!'
-
-const 
-
-
+  // const deleteTip = () => {
+  //   axios.delete(`${BASE_URL}/1`).then(() => {
+  //     alert('Tip Deletedd')
+  //     setTip(null)
+  //   })
+  // }
+  // if (!tip) return 'No Tip!'
 
   return (
     <div className="TipsForm">
@@ -54,17 +57,18 @@ const
         <input type="date">Date: </input>
         <input type="tips" className="tips-input">
           Leave a Quote:
+          <p>{tip.body}</p>
         </input>
-        <button type="submit" onClick={createTip}>
-          Add
-        </button>
-        <button type="delete" onClick={deleteTip}>
+        <button onClick={createTip}>Add</button>
+        {/* <button onClick={deleteTip}>
           Delete
         </button>
-        <button type="edit" onClick={updateTip}>
+        <button onClick={updateTip}>
           Edit
-        </button>
-        <input type="showTip" getTip={getTip}>Get Tip</input>
+        </button> */}
+        <input type="showTip" getTip={getTip}>
+          Get Tip
+        </input>
       </form>
     </div>
   )

@@ -28,11 +28,11 @@ export default function App() {
   return (
     <Card className="mb-2 comment-card" fluid className="comment-card">
       <Card.Header>
-        {postComment.date}
+        {postComments.date}
         <Button className="modal-button-del">X</Button>
       </Card.Header>
       <Card.Body>
-        <Card.Text>{postComment.comment}</Card.Text>
+        <Card.Text>{postComments.comment}</Card.Text>
       </Card.Body>
     </Card>
   )

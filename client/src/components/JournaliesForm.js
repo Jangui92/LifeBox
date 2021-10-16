@@ -19,7 +19,7 @@ const JournaliesForm = () => {
       <p>
         Use the empty field below to fill out your journal entry for the day.
       </p>
-      <form className="journal-form" onSubmit={setJournal}>
+      <form className="journal-form" journal={journal} setJournal={setJournal}>
         <input type="date">Date: </input>
         <input type="journal" className="journalies-input">
           Journal Entry:
