@@ -7,11 +7,16 @@ import axios from 'axios'
 
 const Profile = (props) => {
   const [quote, setQuote] = useState({})
+  const [saveQuote, setSaveQuote] = useState({})
 
   let counter = 0
   useEffect(() => {
     getQuotes()
-  }, [])
+  }, [counter])
+
+  useEffect(() => {
+    saveQuote()
+  })
 
   const getQuotes = async () => {
     try {
@@ -25,21 +30,15 @@ const Profile = (props) => {
     }
   }
 
-  const saveQuotes = async (e) => {
-    e.preventDefault()
-    const saveTips = { content: quote.content, date: '' }
-    const newQuote = await axios.post('http://localhost:3001/tips', saveTips)
-    console.log('profile page new quote', newQuote.data.content)
-    props.setSaveTip(newQuote.data.content)
-  }
-
   return (
     <div>
       <h1> Hello! </h1>
 
       <h1>Quote of the Day</h1>
-
-      <p>{quote.content}</p>
+      <div className="daily-quote">
+        <p>{quote.content}</p>
+        <button>Save</button>
+      </div>
       <TipsForm />
       <JournaliesForm />
       <GratefulForm />

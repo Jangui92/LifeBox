@@ -9,13 +9,14 @@ const TipsForm = (props) => {
   let counter = 0
   useEffect(() => {
     setTip()
-  }, [])
+  }, [counter])
 
   const setTip = async () => {
     try {
       const res = await axios.get(`${BASE_URL}/`)
       setTips(res.data)
       counter += 1
+      setTip()
     } catch (error) {
       throw error
     }
