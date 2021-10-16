@@ -1,4 +1,4 @@
-import Profile from './pages/Profile'
+import Journal from './pages/Journal'
 import Mission from './pages/Mission'
 import NavBar from './components/NavBar'
 import LyfeBox from './pages/LyfeBox'
@@ -15,9 +15,9 @@ function App() {
         <Route exact path="/" component={LyfeBox} />
         <Route path="/Mission" component={Mission} />
         <Route
-          path="/Profile"
+          path="/Journal"
           component={() => (
-            <Profile saveTip={saveTip} setSaveTip={setSaveTip} />
+            <Journal saveTip={saveTip} setSaveTip={setSaveTip} />
           )}
         />
       </Switch>
