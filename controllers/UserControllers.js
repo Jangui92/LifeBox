@@ -2,7 +2,7 @@ const { User } = require('../models')
 
 const GetUser = async (req, res) => {
   try {
-    const user = await User.findOne()
+    const user = await User.findByPk(req.params.user_id)
     res.send(user)
   } catch (error) {
     throw error

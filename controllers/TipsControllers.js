@@ -1,4 +1,4 @@
-const { Tips } = require('../models/tips')
+const { Tips } = require('../models')
 
 const GetAllTips = async (req, res) => {
   try {
@@ -21,7 +21,20 @@ const DeleteTip = async (req, res) => {
     throw error
   }
 }
+const CreateTip = async (req, res) => {
+  try {
+    const tips = await Tips.create({
+      content: req.body.content,
+      date: req.body.date
+    })
+    res.send(tips)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetAllTips,
-  DeleteTip
+  DeleteTip,
+  CreateTip
 }

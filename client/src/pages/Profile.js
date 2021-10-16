@@ -11,7 +11,7 @@ const Profile = (props) => {
   let counter = 0
   useEffect(() => {
     getQuotes()
-  }, [counter])
+  }, [])
 
   const getQuotes = async () => {
     try {
@@ -25,14 +25,28 @@ const Profile = (props) => {
     }
   }
 
+  const saveQuotes = async (e) => {
+    e.preventDefault()
+    const saveTips = { content: quote.content, date: '' }
+    const newQuote = await axios.post('http://localhost:3001/tips', saveTips)
+    console.log('profile page new quote', newQuote.data.content)
+    props.setSaveTip(newQuote.data.content)
+  }
+
   return (
     <div>
       <h1> Hello! </h1>
-      <main>
-        <h1>Quote of the Day</h1>
 
-        <p>{quote.content}</p>
-      </main>
+      <h1>Quote of the Day</h1>
+
+      <p>{quote.content}</p>
+      <button
+        className="quote-button"
+        type="click"
+        onClick={(e) => saveQuotes(e)}
+      >
+        Coin It
+      </button>
       <TipsForm />
       <JournaliesForm />
       <GratefulForm />
