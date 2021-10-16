@@ -4,46 +4,40 @@ import React, { useState, useEffect } from 'react'
 import { BASE_URL } from '../globals'
 
 const TipsForm = (props) => {
-  const [tips, setTips] = useState([])
+  const [tip, setTip] = React.useState(null)
 
-  let counter = 0
-  useEffect(() => {
-    setTip()
-  }, [counter])
-
-  const setTip = async () => {
-    try {
-      const res = await axios.get(`${BASE_URL}/`)
-      setTips(res.data)
-      counter += 1
-      setTip()
-    } catch (error) {
-      throw error
-    }
+  const createTip = () => {
+    axios
+      .post(BASE_URL, {
+        content: req.body.content
+      })
+      .then((response) => {
+        setTip(response.data)
+      })
   }
+  if (!tip) return 'No tip!'
 
-  const saveTips = async (e) => {
-    e.preventDefault()
-    const saveTips = { content: tips.content, date: '' }
-    const newTip = await axios.post('http://localhost:3001/', saveTips)
-    console.log('profile page new quote', newTip.data.content)
-    props.setSaveTip(newTip.data.content)
+  const deleteTip = () => {
+    axios.delete(`${BASE_URL}/1`).then(() => {
+      alert('Tip Deletedd')
+      setTip(null)
+    })
   }
-
-  const handleSubmit = () => {
-    e.preventDefault()
-  }
-
+  if (!tip) return 'No Tip!'
   return (
     <div className="TipsForm">
-      <h2>{tips.content} </h2>
-      <form className="tips-form" onSubmit={handleSubmit}>
+      <h2>{tip} </h2>
+      <form className="tips-form">
         <input type="date">Date: </input>
         <input type="tips" className="tips-input">
           Leave a Quote:
         </input>
-        <button type="submit">Add</button>
-        <button tyoe="delete">Delete</button>
+        <button type="submit" onClick={createTip}>
+          Add
+        </button>
+        <button tyoe="delete" onClick={deleteTip}>
+          Delete
+        </button>
       </form>
     </div>
   )

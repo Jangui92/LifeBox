@@ -16,6 +16,7 @@ const GratefulForm = () => {
         ></textarea>
         <label for="floatingTextarea2">Today, I am grateful for...</label>
         <button>Add</button>
+        <button></button>
       </div>
     </div>
   )
