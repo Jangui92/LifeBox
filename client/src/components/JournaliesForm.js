@@ -10,6 +10,7 @@ const JournaliesForm = () => {
           Use the empty field below to fill out your journal entry for the day.
         </p>
         <input className="journalies-input"></input>
+        <button>Add</button>\<button>Delete</button>
       </form>
     </div>
   )
