@@ -1,4 +1,7 @@
-'use strict'
+const db = require('../db')
+const tips = require('../models/tips')
+
+;('use strict')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {

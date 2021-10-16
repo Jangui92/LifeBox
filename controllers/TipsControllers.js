@@ -1,8 +1,9 @@
 const { Tips } = require('../models')
+// const { Tips } = require('../seeders')
 
 const GetAllTips = async (req, res) => {
   try {
-    const tips = await Tips.findAll(req.params.tips_id)
+    const tips = await Tips.findAll()
     res.send(tips)
   } catch (error) {
     throw error
@@ -11,11 +12,10 @@ const GetAllTips = async (req, res) => {
 
 const DeleteTip = async (req, res) => {
   try {
-    const tips = await Tips.destroy({ where: { tips_id: req.params.id } })
+    let tipsId = parseInt(req.params.tips_id)
+    await Tips.destroy({ where: { id: tipsId } })
     res.send({
-      msg: 'Tip Deleted',
-      payload: req.params.user_id,
-      status: 'Ok'
+      msg: `Tip ${tipsId} Deleted`
     })
   } catch (error) {
     throw error
@@ -32,9 +32,22 @@ const CreateTip = async (req, res) => {
     throw error
   }
 }
+const UpdateTips = async (req, res) => {
+  try {
+    let tipsId = parseInt(req.params.tips_id)
+    let updatedTips = await Tips.update(req.body, {
+      where: { id: tipsId },
+      returning: true
+    })
+    res.send(updatedTips)
+  } catch (error) {
+    throw error
+  }
+}
 
 module.exports = {
   GetAllTips,
   DeleteTip,
-  CreateTip
+  CreateTip,
+  UpdateTips
 }
