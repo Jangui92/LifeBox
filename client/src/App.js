@@ -1,6 +1,5 @@
 import Profile from './pages/Profile'
 import Mission from './pages/Mission'
-import CoinitPage from './pages/CoinitPage'
 import NavBar from './components/NavBar'
 import LyfeBox from './pages/LyfeBox'
 import React, { useState } from 'react'
@@ -19,12 +18,6 @@ function App() {
           path="/Profile"
           component={() => (
             <Profile saveTip={saveTip} setSaveTip={setSaveTip} />
-          )}
-        />
-        <Route
-          path="/CoinitPage"
-          component={(props) => (
-            <CoinitPage saveTip={saveTip} {...props} setSaveTip={setSaveTip} />
           )}
         />
       </Switch>

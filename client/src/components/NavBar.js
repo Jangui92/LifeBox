@@ -13,9 +13,6 @@ export default function Navigation() {
           <Nav className="me-auto">
             <Nav.Link href="/Mission">Our Mission</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/CoinitPage">Coin It</NavDropdown.Item>
-            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
