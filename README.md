@@ -54,7 +54,7 @@ Users will be able to register, login and navigate from their user profile. User
 
 > ## _Future Updates_
 
-- [ ] Utilize a quote of the day API
+- [x] Utilize a quote of the day API
 - [ ] Infuse Auth to create a safe environment for users
 - [ ] Incorporate AWS S3 for users to upload photos
 
