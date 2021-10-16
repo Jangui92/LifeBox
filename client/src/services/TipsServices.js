@@ -1,8 +1,9 @@
-import axios from 'axios'
+import Client from 'api'
+import 'seeders/tips.js'
 
 async function randomQuote() {
   try{
-  const response = await axios.get('/') }
+  const response = await Client.get('/') }
   const data = await response.json()
   console.log(`${data.content} —${data.author}`)
   } catch (error) {
