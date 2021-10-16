@@ -1,6 +1,6 @@
 const { Comments } = require('../models/comments')
 
-const GetComments = async (req, res) => {
+const GetAllComments = async (req, res) => {
   try {
     const comments = await Comments.findAll()
     res.send(comments)
@@ -22,11 +22,10 @@ const DeleteComment = async (req, res) => {
 }
 const CreateComment = async (req, res) => {
   try {
-    const tips = await Comments.create({
-      content: req.body.content,
-      date: req.body.date
+    const comment = await Comments.create({
+      comment: req.body.comment
     })
-    res.send(commentss)
+    res.send(comment)
   } catch (error) {
     throw error
   }

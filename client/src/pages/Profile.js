@@ -40,13 +40,6 @@ const Profile = (props) => {
       <h1>Quote of the Day</h1>
 
       <p>{quote.content}</p>
-      <button
-        className="quote-button"
-        type="click"
-        onClick={(e) => saveQuotes(e)}
-      >
-        Coin It
-      </button>
       <TipsForm />
       <JournaliesForm />
       <GratefulForm />

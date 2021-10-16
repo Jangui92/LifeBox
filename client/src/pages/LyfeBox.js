@@ -4,7 +4,8 @@ function LyfeBox() {
   return (
     <div>
       <div>
-        <h1 className="lyfebox-title"> Lyfebox</h1>
+        <h1 className="lyfebox-title">LyfeBox </h1>
+        <div className="lyfebox-bubble"> </div>
       </div>
       {/* bubble divs */}
       <div className="bubble1"></div>
