@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
-// import { DeleteComment } from '../services/CommentServices'
+import { DeleteComment } from '../services/CommentServices'
 
 const CommentsForm = () => {
   return <div className="comments-container"></div>
@@ -10,7 +10,7 @@ export default CommentsForm
 
 const CommentCard = (props) => {
   const deleteComment = async () => {
-    // await DeleteComment(props.commentsId)
+    await DeleteComment(props.commentsId)
     props.getPhotoComments()
     props.showModal()
   }
@@ -19,8 +19,10 @@ const CommentCard = (props) => {
     <Card className="mb-2 comment-card" fluid className="comment-card">
       <Card.Header>
         {props.name}
-        {/* <Button onClick={deleteComment} className="modal-button-del"> */}X
-        {/* </Button> */}
+        <Button onClick={deleteComment} className="modal-button-del">
+          {' '}
+          X
+        </Button>
       </Card.Header>
       <Card.Body>
         <Card.Text>{props.comment}</Card.Text>
