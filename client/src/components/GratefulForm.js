@@ -1,13 +1,25 @@
 import React from 'react'
+import { Row, Form, Col } from 'react-bootstrap'
 
 const GratefulForm = () => {
   return (
     <div>
-      <p>
-        Take this time to tell us what you are grateful for, there is nothing
-        too small. In retrospect we begin to see how all the little things that
-        we are grateful for add up into creating our 'why's' in life.
+      <p className="gratefulp">
+        This section is intentionally made for you to focus on gratitude. No
+        matter how big or small. Watch it boost your day!
       </p>
+      <Row className="text-field">
+        <Col>
+          <Form.Control
+            size="lg"
+            type="text"
+            placeholder="What are you greatful for?"
+          />
+        </Col>
+      </Row>
+      <button className="buttons">Add</button>
+      <button className="dbuttons">Delete</button>
+      <button className="ebuttons">Edit</button>
     </div>
   )
 }

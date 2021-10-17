@@ -1,12 +1,17 @@
 import React from 'react'
+import { Form, Row, Col } from 'react-bootstrap'
 
 const JournaliesForm = () => {
   return (
-    <div>
-      <h1>Journalies </h1>
-      <p>
-        Use the empty field below to fill out your journal entry for the day.
-      </p>
+    <div className="journalies-container">
+      <Row className="text-field">
+        <Col>
+          <Form.Control size="lg" type="text" placeholder="Journal" />
+        </Col>
+      </Row>
+      <button className="buttons">Add</button>
+      <button className="dbuttons">Delete</button>
+      <button className="ebuttons">Edit</button>
     </div>
   )
 }

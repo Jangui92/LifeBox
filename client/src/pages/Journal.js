@@ -27,18 +27,16 @@ function Journal(props) {
 
   return (
     <div>
-      <h1> Hello! </h1>
-
-      <h1>Quote of the Day</h1>
+      <h1 className="qod">Quote of the Day</h1>
       <div className="daily-quote">
-        <p>{quote.content}</p>
+        <p className="center-quote">"{quote.content}"</p>
 
         <p> </p>
       </div>
       <TipsForm />
       <JournaliesForm />
-      <GratefulForm />
       <CommentsForm />
+      <GratefulForm />
     </div>
   )
 }
