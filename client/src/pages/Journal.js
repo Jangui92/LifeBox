@@ -7,11 +7,16 @@ import axios from 'axios'
 
 function Journal(props) {
   const [quote, setQuote] = useState({})
+  const [author, setAuthor] = useState('')
 
   let count = 0
   useEffect(() => {
     getQuotes()
   }, [count])
+
+  useEffect(() => {
+    getAuthor()
+  })
 
   const getQuotes = async () => {
     try {
@@ -19,6 +24,17 @@ function Journal(props) {
         `http://api.quotable.io/random?tags=inspirational`
       )
       setQuote(res.data)
+      count += 1
+    } catch (error) {
+      throw error
+    }
+  }
+  const getAuthor = async () => {
+    try {
+      const res = await axios.get(
+        `http://api.quotable.io/random?tags=inspirational/authors`
+      )
+      setQuot(res.data)
       count += 1
     } catch (error) {
       throw error
