@@ -7,7 +7,6 @@ import axios from 'axios'
 
 function Journal(props) {
   const [quote, setQuote] = useState({})
-  // const [tip, setTip] = useState([])
 
   let count = 0
   useEffect(() => {
@@ -33,7 +32,7 @@ function Journal(props) {
       <h1>Quote of the Day</h1>
       <div className="daily-quote">
         <p>{quote.content}</p>
-        <p> {getQuotes}</p>
+
         <p> </p>
       </div>
       <TipsForm />
