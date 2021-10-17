@@ -4,9 +4,14 @@ import { Form, Row, Col } from 'react-bootstrap'
 const JournaliesForm = () => {
   return (
     <div className="journalies-container">
-      <Row className="text-field">
+      <Row>
         <Col>
-          <Form.Control size="lg" type="text" placeholder="Journal" />
+          <Form.Control
+            className="text-field"
+            size="lg"
+            type="text"
+            placeholder="Journal"
+          />
         </Col>
       </Row>
       <button className="buttons">Add</button>

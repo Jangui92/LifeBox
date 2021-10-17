@@ -8,9 +8,10 @@ const GratefulForm = () => {
         This section is intentionally made for you to focus on gratitude. No
         matter how big or small. Watch it boost your day!
       </p>
-      <Row className="text-field">
+      <Row>
         <Col>
           <Form.Control
+            className="text-field"
             size="lg"
             type="text"
             placeholder="What are you greatful for?"

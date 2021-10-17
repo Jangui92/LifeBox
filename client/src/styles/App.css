@@ -9,6 +9,10 @@
   
 }
 
+.text-field {
+  padding: 20px;
+}
+
 
 .buttons, .dbuttons, .ebuttons {
   margin-top: 10px;
@@ -16,10 +20,9 @@
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   border-color: rgb(245, 242, 248);
+  margin-bottom: 20px;
 }
-.journal-field {
-  background: rgba(173, 139, 88, 0.34);
-}
+
 .mission-bubble {
   left: 0;
   line-height: 200px;
@@ -223,12 +226,4 @@ color: rgb(143, 122, 83);
   border-radius: 158px;
 }
 
-.footer {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  bottom: 0;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
+

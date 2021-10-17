@@ -30,8 +30,6 @@ function Journal(props) {
       <h1 className="qod">Quote of the Day</h1>
       <div className="daily-quote">
         <p className="center-quote">"{quote.content}"</p>
-
-        <p> </p>
       </div>
       <TipsForm />
       <JournaliesForm />

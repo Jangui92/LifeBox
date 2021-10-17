@@ -52,9 +52,10 @@ const TipsForm = () => {
   return (
     <div>
       <div className="TipsForm">
-        <Row className="text-field">
+        <Row>
           <Col>
             <Form.Control
+              className="text-field"
               size="lg"
               type="text"
               placeholder="Leave a Quote or helpful tip"

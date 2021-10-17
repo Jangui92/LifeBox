@@ -23,9 +23,14 @@ const CommentsForm = () => {
   // if (!postComment) return 'No comment'
   return (
     <div>
-      <Row className="text-field">
+      <Row>
         <Col>
-          <Form.Control size="lg" type="text" placeholder="Leave a Comment" />
+          <Form.Control
+            className="text-field"
+            size="lg"
+            type="text"
+            placeholder="Leave a Comment"
+          />
         </Col>
       </Row>
       <button className="buttons">Add</button>
