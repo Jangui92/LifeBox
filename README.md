@@ -17,8 +17,6 @@ Finding Your l'Y'fe
 4. A design mock up is on [Figma](https://www.figma.com/file/1yrt8dZSW4wnb2SSa1KgEh/Untitled?node-id=0%3A1).
 6. If you would like to dive deeper into LyfeBox's commencement, I have provided a link to my trello. Take a look! [here](https://trello.com/b/2LHsSQdZ/lifebox).
 
-![Screenshots](Screenshots/CHC.png)
-![Screenshots](Screenshots/ERD.png)
 
 > ## _Technologies used_
 
