@@ -5,9 +5,7 @@ function LyfeBox() {
     <div>
       <div>
         <h1 className="lyfebox-title">LyfeBox </h1>
-        <div className="lyfebox-bubble" class="animated pulse">
-          {' '}
-        </div>
+        <div className="lyfebox-bubble"> </div>
       </div>
       {/* bubble divs */}
       <div className="bubble1"></div>
