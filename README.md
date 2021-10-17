@@ -38,7 +38,7 @@ Finding Your l'Y'fe
 
 ![Screenshots](Screenshots/page2.png)
 
-![Screenshots]()
+![Screenshots](Screenshots/page3.png)
 
 > ## _Credits_
 -[Figma](https://www.figma.com/file/1yrt8dZSW4wnb2SSa1KgEh/Untitled?node-id=0%3A1)
