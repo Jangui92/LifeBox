@@ -27,7 +27,7 @@ Finding Your l'Y'fe
 
 > # _Details_
 >
-> **_LifeBox_** is a mental wellness and journaling app that allows users to display a journal on an open site.  Users can receive generated helpful quotes to achieve a peaceful space.  An app designed to cultivate healthy habits that will promote a healthy mindset and healthy life overall. By daily practicing gratefulness will enrich your relationships with others, reduce stress and find your ‘y’ in Lyfe.
+> **_LifeBox_** is a public quote & wellness  journal app that allows users to display a journal on an open site.  Users can receive generated helpful quotes to achieve a peaceful space.  An app designed to cultivate healthy habits that will promote a healthy mindset and healthy life overall. By daily practicing gratefulness will enrich your relationships with others, reduce stress and find your ‘y’ in Lyfe.
 
 
 
