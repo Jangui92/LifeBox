@@ -13,7 +13,7 @@ const TipsForm = () => {
   //   }
   // }
   // const getTip = (res) => {
-  //   axios.get(BASE_URL/tips).then((res) => {
+  //   axios.get(BASE_URL / tips).then((res) => {
   //     setTip(res.data)
   //   })
   // }
