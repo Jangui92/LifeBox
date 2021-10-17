@@ -36,9 +36,9 @@ Finding Your l'Y'fe
 > ## _Screenshots_
 >
 > 
-![Screenshots]()
+![Screenshots](Screenshots/page1.png)
 
-![Screenshots]()
+![Screenshots](Screenshots/page2.png)
 
 ![Screenshots]()
 
