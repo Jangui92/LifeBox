@@ -42,9 +42,11 @@ border-radius: 356.5px;
 .lyfebox-title {
   line-height: 750px;
   margin-top: -15px;
-  margin-left: 550px;
+  margin-left: 460px;
   position: absolute;
   text-align: center;
+  font-family: fantasy;
+font-size: 85px;;
   
   color: rgba(110, 98, 98, 0.9);
 }
@@ -73,6 +75,7 @@ color:rgba(110, 98, 98, 0.9);
   margin-left: 140px;
   position: absolute;
   text-align: center;
+  font-family: fantasy;
   
   color: rgba(110, 98, 98, 0.9);
 }
@@ -82,6 +85,7 @@ color:rgba(110, 98, 98, 0.9);
   margin-left: 40px;
   position: absolute;
   text-align: center;
+  font-family: fantasy;
   top: 50%;
   width: 430px;
   height: 474px;
@@ -95,7 +99,7 @@ font-family: fantasy;
 color: rgb(143, 122, 83);
 }
 
-.nav-barlyfe {
+.nav-barlyfe{
   color: rgba(110, 98, 98, 0.9);
 }
 

@@ -3,11 +3,9 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 
 export default function Navigation() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="nav-barlyfe">
       <Container>
-        <Navbar.Brand href="/" className="nav-barlyfe">
-          LyfeBox
-        </Navbar.Brand>
+        <Navbar.Brand href="/">LyfeBox</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
