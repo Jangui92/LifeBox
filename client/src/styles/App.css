@@ -40,8 +40,6 @@ border-radius: 356.5px;
 }
 
 
-
-
 .lyfebox-title {
   line-height: 750px;
   margin-top: -15px;
@@ -49,7 +47,7 @@ border-radius: 356.5px;
   position: absolute;
   text-align: center;
   font-family: fantasy;
-  font-size: 85px;;
+  font-size: 85px;
   
   color: rgba(110, 98, 98, 0.9);
 }
@@ -72,10 +70,10 @@ border-radius: 356.5px;
   color:rgba(110, 98, 98, 0.9);
 }
 .mission {
-  
+  font-size: 55px;
   line-height: 300px;
   margin-top: -15px;
-  margin-left: 140px;
+  margin-left: 100px;
   position: absolute;
   text-align: center;
   font-family: fantasy;
@@ -88,6 +86,7 @@ border-radius: 356.5px;
   position: absolute;
   text-align: center;
   font-family: fantasy;
+  font-size: 18px;
   top: 50%;
   width: 430px;
   height: 474px;
