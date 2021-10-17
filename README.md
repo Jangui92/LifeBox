@@ -1,6 +1,6 @@
 ![Screenshot](Screenshots/lyfebox.png)
 ># **_LyfeBox_**
-**Mental Wellness Journal**:
+**Public Quote & Wellness Journal**:
 Finding Your l'Y'fe
 
 #### By: Janay Anguiano
