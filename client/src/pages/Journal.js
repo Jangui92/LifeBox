@@ -9,9 +9,10 @@ function Journal(props) {
   const [quote, setQuote] = useState({})
   // const [tip, setTip] = useState([])
 
+  let count = 0
   useEffect(() => {
     getQuotes()
-  })
+  }, [count])
 
   const getQuotes = async () => {
     try {
@@ -19,6 +20,7 @@ function Journal(props) {
         `http://api.quotable.io/random?tags=inspirational`
       )
       setQuote(res.data)
+      count += 1
     } catch (error) {
       throw error
     }
@@ -31,7 +33,7 @@ function Journal(props) {
       <h1>Quote of the Day</h1>
       <div className="daily-quote">
         <p>{quote.content}</p>
-        <p> </p>
+        <p> {getQuotes}</p>
         <p> </p>
       </div>
       <TipsForm />

@@ -1,8 +1,8 @@
-import axios from 'axios'
-import React, { useState } from 'react'
+// import axios from 'axios'
+import React from 'react'
 // import { BASE_URL } from '../globals'
 
-const TipsForm = (props) => {
+const TipsForm = () => {
   // const [tip, setTip] = useState(null)
 
   // const getTip = async () => {
@@ -52,22 +52,16 @@ const TipsForm = (props) => {
 
   return (
     <div>
-    <div className="TipsForm">
-      <h2>        Leave a Quote:</h2>
-      <form className="tips-form">
-        {props.tipsData.length > 0 ? (
-          props.tipsData.map((tips)=>(
-            <p {tips.content}>
-        <input type="date">Date: </input>
-        <input type="tips" className="tips-input">
-        </input>
-        <button >Add</button>
-        <button >Delete</button>
-        <button >Edit</button>
-        ))
-        )}
-      </form>
-    </div>
+      <div className="TipsForm">
+        <h2> Leave a Quote:</h2>
+        <form className="tips-form">
+          <input type="date">Date: </input>
+          <input type="tips" className="tips-input"></input>
+          <button>Add</button>
+          <button>Delete</button>
+          <button>Edit</button>
+        </form>
+      </div>
     </div>
   )
 }

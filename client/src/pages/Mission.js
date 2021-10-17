@@ -14,10 +14,6 @@ function Mission() {
         {/* bubble divs */}
         <div className="bubble7"></div>
         <div className="bubble8"></div>
-        <div className="bubble9"></div>
-        <div className="bubble10"></div>
-        <div className="bubble11"></div>
-        <div className="bubble12"></div>
       </div>
     </div>
   )

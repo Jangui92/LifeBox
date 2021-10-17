@@ -1,5 +1,4 @@
 import Client from 'api'
-import 'seeders/tips.js'
 
 export const GetQuotes = async () => {
   try {
