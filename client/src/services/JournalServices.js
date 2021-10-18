@@ -22,21 +22,13 @@ export const GetComments = async (comments) => {
 
 export const PostComment = async (user_id, data) => {
   try {
-    const res = await Client.post(`/comment/${user_id}`) {
+    const res = await Client.post(`/comment/${user_id}`) 
       comment: data
-    }
+    
     return res.data
   } catch (error) {
     throw error
   }
-
-export const DeleteComment = async (comments_id) => {
-  try {
-    await Axios.delete(`/comment/${comments_id}`)
-  } catch (error) {
-    throw error
-  }
-}
 
 export const DeleteJournalies = async (journalies_id) => {
   try {
@@ -44,4 +36,3 @@ export const DeleteJournalies = async (journalies_id) => {
   } catch (error) {
     throw error
   }
-}

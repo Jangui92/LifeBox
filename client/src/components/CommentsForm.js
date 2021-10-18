@@ -1,26 +1,24 @@
 import React from 'react'
 import { Row, Form, Col } from 'react-bootstrap'
-// import axios from 'axios'
-// const baseURL = 'https://jsonplaceholder.typicode.com/posts'
+import axios from 'axios'
+import {
+  UpdateComments,
+  DeleteComment,
+  PostComment,
+  GetComments
+} from '../services/CommentsServices'
 
-const CommentsForm = () => {
-  // const [postComment, setComment] = React.useState(null)
-  // React.useEffect(() => {
-  //   axios.get(`${baseURL}/1`).then((response) => {
-  //     setComment(response.data)
-  //   })
-  // }, [])
-  // function postComments() {
-  //   axios
-  //     .post(baseURL, {
-  //       date: '',
-  //       body: ''
-  //     })
-  //     .then((response) => {
-  //       setComment(response.data)
-  //     })
-  // }
-  // if (!postComment) return 'No comment'
+const CommentsForm = (props) => {
+  const deleteComment = async () => {
+    await DeleteComment(props.commentId)
+  }
+  const getComments = async () => {
+    const data = await GetComments(props.commentsId)
+  }
+  const updateComment = async () => {
+    const data = await UpdateComments(props.commentsId)
+  }
+
   return (
     <div>
       <Row>
@@ -30,12 +28,19 @@ const CommentsForm = () => {
             size="lg"
             type="text"
             placeholder="Leave a Comment"
+            getComments={getComments}
           />
         </Col>
       </Row>
-      <button className="buttons">Add</button>
-      <button className="dbuttons">Delete</button>
-      <button className="ebuttons">Edit</button>
+      <button className="buttons" onClick={postComment}>
+        Add
+      </button>
+      <button className="dbuttons" onClick={deleteComment}>
+        Delete
+      </button>
+      <button className="ebuttons" onClick={updateComment}>
+        Edit
+      </button>
     </div>
   )
 }
