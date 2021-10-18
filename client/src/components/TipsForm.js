@@ -7,7 +7,7 @@ const TipsForm = () => {
   return (
     <div>
       <div className="TipsForm">
-        <Row>
+        {/* <Row>
           <Col>
             <Form.Control
               className="text-field"
@@ -26,7 +26,7 @@ const TipsForm = () => {
         </button>
         <button className="ebuttons" onClick={updateTip}>
           Edit
-        </button>
+        </button> */}
       </div>
     </div>
   )
