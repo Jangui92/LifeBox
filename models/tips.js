@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Tips.hasMany(models.Comments, { foreignKey: 'commentsId' })
+      Tips.hasMany(models.Comments, { foreignKey: 'tipsId' })
       Tips.belongsTo(models.User, { foreignKey: 'userId' })
     }
   }
@@ -16,14 +16,13 @@ module.exports = (sequelize, DataTypes) => {
     {
       userId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        onDelete: 'CASCADE',
         references: {
-          models: 'users',
+          model: 'users',
           key: 'id'
         }
       },
-      content: DataTypes.STRING,
-      date: DataTypes.STRING
+      content: DataTypes.STRING
     },
     {
       sequelize,
