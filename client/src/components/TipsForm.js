@@ -1,53 +1,65 @@
-// import axios from 'axios'
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { Row, Col, Form } from 'react-bootstrap'
-// import { BASE_URL } from '../globals'
+import { BASE_URL } from '../globals'
 
 const TipsForm = () => {
-  // const getTip = async () => {
-  //   try {
-  //     const res = await axios.get()
-  //     setTip(res.data)
-  //   } catch (error) {
-  //     throw error
-  //   }
-  // }
-  // const getTip = (res) => {
-  //   axios.get(BASE_URL / tips).then((res) => {
-  //     setTip(res.data)
-  //   })
-  // }
-  // if (!tip) return null
+  const [tip, setTip] = useState({})
+  const [updatetip, setUpdateTip] = useState({})
+  const [createtip, setCreateTip] = useState({})
+  const [deletetip, setDeleteTip] = useState({})
 
-  // const updateTip = (req, res) => {
-  //   axios
-  //     .put(`${BASE_URL}/tipsId`, {
-  //       content: req.body.content
-  //     })
-  //     .then((res) => {
-  //       setTip(res.data)
-  //     })
-  // }
-  // if (!tip) return 'No Post!'
+  useEffect(() => {
+    getTips()
+    updateTip()
+    createTip()
+    deleteTip()
+  })
 
-  // const createTip = (req, res) => {
-  //   axios
-  //     .post(BASE_URL, {
-  //       content: req.body.content
-  //     })
-  //     .then((res) => {
-  //       setTip(res.data)
-  //     })
-  // }
-  // if (!tip) return 'No tip!'
+  const getTips = async () => {
+    try {
+      const res = await axios.get(
+        `${BASE_URL}/tips
+      `
+      )
+      setTip(res.data)
+    } catch (error) {
+      throw error
+    }
+  }
 
-  // const deleteTip = () => {
-  //   axios.delete(`${BASE_URL}/tipsId`).then(() => {
-  //     alert('Tip Deletedd')
-  //     setTip(null)
-  //   })
-  // }
-  // if (!tip) return 'No Tip!'
+  if (!tip) return null
+
+  const updateTip = (req, res) => {
+    axios
+      .put(`${BASE_URL}/tipsId`, {
+        content: ''
+      })
+      .then((res) => {
+        setUpdateTip(res.data)
+      })
+  }
+  if (!updatetip) return 'No Post!'
+
+  const createTip = (req, res) => {
+    axios
+      .post(BASE_URL, {
+        content: ''
+      })
+      .then((res) => {
+        console.log(res)
+        setCreateTip(res.data)
+      })
+  }
+  if (!createtip) return 'No tip!'
+
+  const deleteTip = () => {
+    axios.delete(`${BASE_URL}/tipsId`).then(() => {
+      alert('Tip Deleted')
+      setDeleteTip(null)
+    })
+  }
+  if (!deletetip) return 'No Tip!'
 
   return (
     <div>
@@ -59,12 +71,19 @@ const TipsForm = () => {
               size="lg"
               type="text"
               placeholder="Leave a Quote or helpful tip"
+              getTips={getTips}
             />
           </Col>
         </Row>
-        <button className="buttons">Add</button>
-        <button className="dbuttons">Delete</button>
-        <button className="ebuttons">Edit</button>
+        <button className="buttons" onClick={createTip}>
+          Add
+        </button>
+        <button className="dbuttons" onClick={deleteTip}>
+          Delete
+        </button>
+        <button className="ebuttons" onClick={updateTip}>
+          Edit
+        </button>
       </div>
     </div>
   )

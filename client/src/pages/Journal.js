@@ -5,8 +5,9 @@ import CommentsForm from '../components/CommentsForm'
 import GratefulForm from '../components/GratefulForm'
 import axios from 'axios'
 
-function Journal(props) {
+function Journal() {
   const [quote, setQuote] = useState({})
+  const [tip, setTip] = useState({})
 
   let count = 0
   useEffect(() => {
@@ -32,7 +33,7 @@ function Journal(props) {
         <p className="center-quote">"{quote.content}"</p>
         <p className="center-quote">{quote.author}</p>
       </div>
-      <TipsForm />
+      <TipsForm tip={tip} />
       <JournaliesForm />
       <CommentsForm />
       <GratefulForm />

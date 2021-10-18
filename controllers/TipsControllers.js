@@ -4,6 +4,7 @@ const { Tips } = require('../models')
 const GetAllTips = async (req, res) => {
   try {
     const tips = await Tips.findAll()
+    console.log('tips', tips)
     res.send(tips)
   } catch (error) {
     throw error

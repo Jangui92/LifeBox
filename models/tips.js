@@ -14,6 +14,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   Tips.init(
     {
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          models: 'users',
+          key: 'id'
+        }
+      },
       content: DataTypes.STRING,
       date: DataTypes.STRING
     },
